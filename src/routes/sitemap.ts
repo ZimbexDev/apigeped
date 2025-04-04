@@ -22,68 +22,44 @@ export interface MenuItem {
 const sitemap: MenuItem[] = [
   {
     id: 'dashboard',
-    subheader: 'Dashboard',
+    subheader:'Painel',
     path: '/',
     icon: 'solar:widget-bold',
     active: true,
   },
   {
     id: 'analytics',
-    subheader: 'Analytics',
-    path: '#!',
+    subheader: 'Pedidos',
+    path: '/',
     icon: 'solar:chart-square-bold',
+    active: true,
   },
   {
     id: 'invoice',
-    subheader: 'Invoice',
-    path: '#!',
+    subheader: 'Facturas',
+    path: '/',
     icon: 'solar:ticket-bold',
+    active: true,
   },
   {
     id: 'schedule',
-    subheader: 'Schedule',
-    path: '#!',
+    subheader: 'Produtos',
+    path: '/',
     icon: 'solar:document-text-bold',
+    active: true,
   },
-  {
-    id: 'calendar',
-    subheader: 'Calendar',
-    path: '#!',
-    icon: 'mage:calendar-2-fill',
-  },
-  {
+    {
     id: 'messages',
-    subheader: 'Messages',
-    path: '#!',
+    subheader: 'Cliente',
+    path: '/',
     icon: 'mage:dashboard-chart-fill',
-    messages: 49,
-  },
-  {
-    id: 'notification',
-    subheader: 'Notification',
-    path: '#!',
-    icon: 'solar:bell-bold',
-  },
-  {
-    id: 'settings',
-    subheader: 'Settings',
-    path: '#!',
-    icon: 'solar:settings-bold',
+    active: true,
   },
   {
     id: 'signin',
-    subheader: 'Sign In',
-    path: paths.signin,
-    icon: 'mage:lock-fill',
-    active: true,
-  },
-  {
-    id: 'signup',
-    subheader: 'Sign Up',
-    path: paths.signup,
-    icon: 'mage:user-plus-fill',
-    active: true,
-  },
-];
+  subheader: '',
+  path: paths.signin,
+    }
+  ];
 
 export default sitemap;

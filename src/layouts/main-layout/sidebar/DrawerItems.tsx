@@ -4,9 +4,7 @@ import List from '@mui/material/List';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Badge from '@mui/material/Badge';
-import Button from '@mui/material/Button';
 import ListItem from '@mui/material/ListItem';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -16,8 +14,6 @@ import IconifyIcon from '@/components/base/IconifyIcon';
 import Image from '@/components/base/Image';
 import sitemap from '@/routes/sitemap';
 import Logo from '@/assets/images/Logo.png';
-import Profile from '@/assets/images/Profile.png';
-import DrawerCardImg from '@/assets/images/lighting.png';
 
 interface DrawerItemsProps {
   expand: boolean;
@@ -43,8 +39,8 @@ const DrawerItems = ({ expand }: DrawerItemsProps) => {
             justifyContent="center"
           >
             <Image src={Logo} alt="logo" height={44} width={44} />
-            <Typography variant="h4" letterSpacing={1} fontWeight={600}>
-              Base
+            <Typography variant="h6" letterSpacing={1} fontWeight={600}>
+              Gestão de Pedidos
             </Typography>
           </Stack>
         </ButtonBase>
@@ -125,27 +121,7 @@ const DrawerItems = ({ expand }: DrawerItemsProps) => {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
-
-      <Box mt="auto" px={2.35} pb={5}>
-        <Stack
-          position="relative"
-          mt="auto"
-          mb={4}
-          width={1}
-          height="auto"
-          display={expand ? 'block' : 'none'}
-          sx={{ userSelect: 'none' }}
-        >
-          <Image src={DrawerCardImg} height={1} width={1} sx={{ objectFit: 'cover' }} />
-
-          <Stack position="absolute" bottom={24} width={1} px={2} justifyContent="center">
-            <Button variant="contained" fullWidth>
-              Upgrade Now
-            </Button>
-          </Stack>
-        </Stack>
-
+      </List>   
         <Stack
           spacing={expand ? 1 : 2}
           direction={expand ? 'row' : 'column'}
@@ -153,22 +129,16 @@ const DrawerItems = ({ expand }: DrawerItemsProps) => {
           justifyContent="space-between"
         >
           <Stack component={Link} href="#!" spacing={1.5} alignItems="center">
-            <Image src={Profile} height={50} width={50} sx={{ borderRadius: 3 }} />
-            <Box sx={[expand ? { display: 'block' } : { display: 'none' }]}>
+                        <Box sx={[expand ? { display: 'block' } : { display: 'none' }]}>
               <Typography mb={-0.5} variant="body2" color="text.primary" fontWeight={700}>
-                Easin Arafat
+                
               </Typography>
               <Typography mt={-0.5} variant="caption" color="text.disabled" fontWeight={400}>
-                Free Account
-              </Typography>
+                              </Typography>
             </Box>
           </Stack>
-
-          <IconButton LinkComponent={Link} href="#!">
-            <IconifyIcon icon="majesticons:logout" color="text.disabled" />
-          </IconButton>
-        </Stack>
-      </Box>
+                 </Stack>
+      
     </>
   );
 };

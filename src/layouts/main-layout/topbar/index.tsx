@@ -10,8 +10,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconifyIcon from '@/components/base/IconifyIcon';
 import Image from '@/components/base/Image';
 import ProfileMenu from './ProfileMenu';
-import LanguageSelect from './LanguageSelect';
+/*import LanguageSelect from './LanguageSelect';*/
 import Logo from '@/assets/images/Logo.png';
+import SignOut from './SignOut';
 
 interface TopbarProps {
   expand: boolean;
@@ -90,7 +91,7 @@ const Topbar = ({
 
           <TextField
             variant="filled"
-            placeholder="Search"
+            placeholder="Procurar"
             sx={{ width: 300, display: { xs: 'none', md: 'flex' } }}
             InputProps={{
               endAdornment: (
@@ -103,7 +104,7 @@ const Topbar = ({
         </Stack>
 
         <Stack spacing={{ xs: 1, sm: 2 }} alignItems="center">
-          <LanguageSelect />
+         
           <IconButton>
             <Badge
               color="error"
@@ -114,6 +115,7 @@ const Topbar = ({
             </Badge>
           </IconButton>
           <ProfileMenu />
+          <SignOut />
         </Stack>
       </Stack>
     </AppBar>

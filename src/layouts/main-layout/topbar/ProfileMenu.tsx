@@ -2,14 +2,13 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import IconifyIcon from '@/components/base/IconifyIcon';
-import Profile from '@/assets/images/Profile.png';
+import Avatar from '@mui/material/Avatar';
 
 interface MenuItems {
   id: number;
@@ -20,32 +19,32 @@ interface MenuItems {
 const menuItems: MenuItems[] = [
   {
     id: 1,
-    title: 'View Profile',
+    title: 'Ver perfil',
     icon: 'mdi:user-circle-outline',
   },
   {
     id: 2,
-    title: 'Account Settings',
+    title: 'Configuração',
     icon: 'mdi:account-cog-outline',
   },
   {
     id: 3,
-    title: 'Notifications',
+    title: 'Notificações',
     icon: 'mdi:bell-outline',
   },
   {
     id: 4,
-    title: 'Switch Account',
+    title: 'Mudar de conta',
     icon: 'mdi:account-box-multiple-outline',
   },
   {
     id: 5,
-    title: 'Help Center',
+    title: 'Ajuda',
     icon: 'mdi:help-circle-outline',
   },
   {
     id: 6,
-    title: 'Logout',
+    title: 'Encerrar',
     icon: 'mdi:logout',
   },
 ];
@@ -72,14 +71,9 @@ const ProfileMenu = () => {
         aria-haspopup="true"
         disableRipple
       >
-        <Avatar
-          src={Profile}
-          sx={{
-            height: 44,
-            width: 44,
-            bgcolor: 'primary.main',
-          }}
-        />
+       <Avatar 
+              />
+
       </ButtonBase>
 
       <Menu
@@ -101,13 +95,13 @@ const ProfileMenu = () => {
       >
         <Box p={1}>
           <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.main' } }}>
-            <Avatar src={Profile} sx={{ mr: 1, height: 42, width: 42 }} />
+          <Avatar  />
             <Stack direction="column">
               <Typography variant="body2" color="text.primary" fontWeight={600}>
-                Easin Arafat
+                Martins Zimba
               </Typography>
               <Typography variant="caption" color="text.secondary" fontWeight={400}>
-                easin@example.com
+                martinszimba@gmail.com
               </Typography>
             </Stack>
           </MenuItem>

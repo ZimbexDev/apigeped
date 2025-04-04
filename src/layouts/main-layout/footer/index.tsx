@@ -13,9 +13,9 @@ const Footer = () => {
       letterSpacing={0.5}
       fontWeight={500}
     >
-      Made with ❤️ by{' '}
-      <Link href="https://themewagon.com/" target="_blank" rel="noreferrer" fontWeight={600}>
-        {'ThemeWagon'}
+      Desenvolvido por{' '}
+      <Link href="www.m-zimba.weebly.com/" target="_blank" rel="noreferrer" fontWeight={600}>
+        {'Martins Zimba'}
       </Link>
     </Typography>
   );

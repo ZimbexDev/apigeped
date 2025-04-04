@@ -19,7 +19,7 @@ const paths = {
   messages: `/${rootPaths.pages}/messages`,
   notification: `/${rootPaths.pages}/notification`,
   settings: `/${rootPaths.pages}/settings`,
-
+  
   // Autenticação
   signin: `/${rootPaths.auth}/signin`,
   signup: `/${rootPaths.auth}/signup`,

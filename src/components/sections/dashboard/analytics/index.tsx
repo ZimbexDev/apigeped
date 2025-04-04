@@ -8,39 +8,39 @@ const actions = [
   {
     id: 1,
     icon: 'mage:refresh',
-    title: 'Refresh',
+    title: 'Actualizar',
   },
   {
     id: 2,
     icon: 'solar:export-linear',
-    title: 'Export',
+    title: 'Exportar',
   },
   {
     id: 3,
     icon: 'mage:share',
-    title: 'Share',
+    title: 'Partilhar',
   },
 ];
 
 const AnalyticsData = [
   {
     id: 1,
-    value: 60,
-    name: 'Sale',
+    value: 23,
+    name: 'Requisição',
   },
   {
     id: 2,
-    value: 45,
-    name: 'Distribute',
+    value: 12,
+    name: 'Produção',
   },
   {
     id: 3,
-    value: 35,
-    name: 'Return',
+    value: 7,
+    name: 'Pronta recolha',
   },
   {
     id: 4,
-    value: 30,
+    value: 0,
     name: '',
   },
 ];
@@ -50,13 +50,13 @@ const Analytics = () => {
     <Paper sx={{ px: 0, height: 410 }}>
       <Stack mt={-0.5} px={3.75} alignItems="center" justifyContent="space-between">
         <Typography variant="h6" color="text.secondary" zIndex={1000}>
-          Analytics
+        Análise
         </Typography>
 
         <ActionMenu actions={actions} />
       </Stack>
 
-      <AnalyticsChart data={AnalyticsData} sx={{ mt: -5.5, mx: 'auto', width: 300, height: '370px !important' }} />
+      <AnalyticsChart data={AnalyticsData} sx={{ mt: -5.5, mx: 'auto', width: 230, height: '370px !important' }} />
     </Paper>
   );
 };

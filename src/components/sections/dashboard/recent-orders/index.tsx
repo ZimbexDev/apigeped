@@ -25,13 +25,13 @@ const RecentOrders = () => {
         justifyContent="space-between"
       >
         <Typography variant="h6" color="text.secondary">
-          Recent Orders
+          Encomendas recentes
         </Typography>
 
         <TextField
           variant="filled"
           size="small"
-          placeholder="Search here"
+          placeholder="Procurar encomenda"
           value={searchText}
           onChange={handleInputChange}
           sx={{ width: 1, maxWidth: { xs: 260, sm: 240 } }}

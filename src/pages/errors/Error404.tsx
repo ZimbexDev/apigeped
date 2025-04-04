@@ -6,7 +6,7 @@ const Error404 = () => {
       <Typography mt={3} variant="h1" color="text.disabled">
         404
       </Typography>
-      <Typography variant="h6">Page not found!</Typography>
+      <Typography variant="h6">Página não encontrada!</Typography>
     </Stack>
   );
 };

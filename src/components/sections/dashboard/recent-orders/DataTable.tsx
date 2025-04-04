@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { DataGrid, GridColDef, useGridApiRef, GridApi } from '@mui/x-data-grid';
@@ -13,17 +12,17 @@ const actions = [
   {
     id: 1,
     icon: 'mage:refresh',
-    title: 'Refresh',
+    title: 'Actualizar',
   },
   {
     id: 2,
     icon: 'solar:export-linear',
-    title: 'Export',
+    title: 'Exportar',
   },
   {
     id: 3,
     icon: 'mage:share',
-    title: 'Share',
+    title: 'Partilhar',
   },
 ];
 
@@ -37,7 +36,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   },
   {
     field: 'id',
-    headerName: 'Tracking no',
+    headerName: 'Encomenda',
     editable: false,
     align: 'left',
     flex: 2,
@@ -45,7 +44,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   },
   {
     field: 'product',
-    headerName: 'Product Name',
+    headerName: 'Produto',
     editable: false,
     align: 'left',
     flex: 2,
@@ -71,8 +70,17 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     sortComparator: (v1, v2) => v1.localeCompare(v2),
   },
   {
+    field: 'delevered',
+    headerName: 'Estado',
+    headerAlign: 'left',
+    align: 'left',
+    editable: false,
+    flex: 1,
+    minWidth: 140,
+         },
+  {
     field: 'price',
-    headerName: 'Price',
+    headerName: 'Total',
     headerAlign: 'left',
     editable: false,
     flex: 1,
@@ -81,7 +89,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
       <Typography variant="caption">
         {formatNumber(params.value, {
           style: 'currency',
-          currency: 'USD',
+          currency: 'MZM',
           maximumFractionDigits: 2,
         })}
       </Typography>
@@ -89,7 +97,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   },
   {
     field: 'inStock',
-    headerName: 'In Stock',
+    headerName: 'INCM',
     editable: false,
     align: 'left',
     flex: 2,
@@ -97,19 +105,14 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   },
   {
     field: 'totalOrder',
-    headerName: 'Total Order',
+    headerName: 'Selos',
     editable: false,
     headerAlign: 'left',
     align: 'left',
     flex: 2,
     minWidth: 140,
-    renderCell: (params) => (
-      <Stack direction="column" alignItems="flex-start" justifyContent="center" height={1}>
-        <Chip label={params.value} size="small" color="secondary" sx={{ borderRadius: 1.75 }} />
-      </Stack>
-    ),
-  },
-  {
+      },
+  /*{
     field: 'pending',
     headerName: 'Pending',
     headerAlign: 'left',
@@ -137,21 +140,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
       </Stack>
     ),
   },
-  {
-    field: 'delevered',
-    headerName: 'Delevered',
-    headerAlign: 'left',
-    align: 'left',
-    editable: false,
-    flex: 1,
-    minWidth: 140,
-    renderCell: (params) => (
-      <Stack direction="column" alignItems="flex-start" justifyContent="center" height={1}>
-        <Chip label={params.value} size="small" color="success" sx={{ borderRadius: 1.75 }} />
-      </Stack>
-    ),
-  },
-  {
+   {
     field: 'balance',
     headerName: 'Balance',
     headerAlign: 'right',
@@ -168,7 +157,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
         })}
       </Typography>
     ),
-  },
+  },*/
   {
     field: 'action',
     headerAlign: 'right',
@@ -205,7 +194,7 @@ const DataTable = ({ searchText }: TaskOverviewTableProps) => {
       disableColumnSelector
       disableRowSelectionOnClick
       initialState={{
-        pagination: { paginationModel: { pageSize: 4 } },
+        pagination: { paginationModel: { pageSize: 5 } },
       }}
       autosizeOptions={{
         includeOutliers: true,
@@ -217,7 +206,7 @@ const DataTable = ({ searchText }: TaskOverviewTableProps) => {
         pagination: DataGridFooter,
       }}
       checkboxSelection
-      pageSizeOptions={[4]}
+      pageSizeOptions={[5]}
     />
   );
 };

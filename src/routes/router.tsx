@@ -63,7 +63,7 @@ const router = createBrowserRouter([
               </AuthLayout>
             ),
           },
-          {
+              {
             path: paths.resetPassword,
             element: <ResetPassword />,
           },
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         path: '*',
         element: <Error404 />,
       },
-    ],
+          ],
   },
 ]);
 
