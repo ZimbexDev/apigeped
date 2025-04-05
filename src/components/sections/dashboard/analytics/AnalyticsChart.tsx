@@ -109,7 +109,7 @@ const AnalyticsChart = ({ data, ...rest }: AnalyticsChartProps) => {
           left: 'center',
           top: 'center',
           style: {
-            text: '80%',
+            text: '69%',
             fontWeight: 800,
             textAlign: 'center',
             fontFamily: fontFamily.nunito,
@@ -122,7 +122,7 @@ const AnalyticsChart = ({ data, ...rest }: AnalyticsChartProps) => {
           left: 'center',
           top: '57%',
           style: {
-            text: 'Transactions',
+            text: 'Transação',
             textAlign: 'center',
             fontFamily: fontFamily.nunito,
             fontSize: theme.typography.body1.fontSize,

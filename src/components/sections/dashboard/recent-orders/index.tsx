@@ -25,7 +25,7 @@ const RecentOrders = () => {
         justifyContent="space-between"
       >
         <Typography variant="h6" color="text.secondary">
-          Encomendas recentes
+          Pedidos recentes
         </Typography>
 
         <TextField
